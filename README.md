@@ -1,2 +1,2 @@
 # PerformanceMonitoring
-Component that can extract performance metrics.
+Performance monitoring component for Dmon system.
