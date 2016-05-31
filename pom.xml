@@ -15,6 +15,7 @@
     </parent>
 
     <properties>
+        <jarName>PerformanceMonitoring</jarName>
         <logBackVersion>1.1.2</logBackVersion>
         <dmonCoreCommons>1.0.0</dmonCoreCommons>
         <!-- in order for SPRING to package for java 1.8 -->
@@ -60,5 +61,23 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <finalName>${jarName}</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
